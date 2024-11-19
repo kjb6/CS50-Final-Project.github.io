@@ -1,0 +1,79 @@
+/* Apply the background image globally */
+/* static/style.css */
+body {
+    background-image: url("/static/pollution2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+/* Dark overlay for readability on background image */
+.body-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+    z-index: 1;
+}
+
+/* Content overlay to improve text readability */
+.content-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2; /* Ensure overlay sits above background */
+}
+
+/* Navbar styling with slight transparency */
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent navbar */
+    color: white;
+}
+
+/* Footer styling with slight transparency */
+.footer {
+    background-color: rgba(0, 0, 0, 0.6); /* Match navbar transparency */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+/* Centered content helper for main sections */
+.centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Vertically center main content */
+    text-align: center;
+}
+
+/* Button styling */
+.btn-custom {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Custom opacity for content sections */
+.bg-opacity-75 {
+    background-color: rgba(0, 0, 0, 0.75); /* 75% opacity for dark backgrounds */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}

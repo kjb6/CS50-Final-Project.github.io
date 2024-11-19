@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title %}Purpose of the Research{% endblock %}
+{% block styles %}
+<style>
+  /* Specific background image for the Purpose page */
+  body {
+    background-image: url("{{ url_for('static', filename='pollution2.jpeg') }}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white; /* Ensure text is readable on the background */
+  }
+
+  .bg-dark {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.7
+    ) !important; /* Dark overlay for readability */
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="text-white my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8 p-4 bg-dark bg-opacity-75 rounded">
+      <h1 class="text-center mb-4">Purpose of the Research</h1>
+      <p class="lead">
+        This project investigates the relationship between CO₂ emissions and
+        global temperature changes. By analyzing data on CO₂ levels and
+        temperature variations, we aim to better understand how human activities
+        impact the climate and contribute to global warming.
+      </p>
+      <p>
+        Through statistical analysis and visualizations, this research
+        highlights the correlation between carbon dioxide levels in the
+        atmosphere and average temperature increases over time, emphasizing the
+        need for sustainable practices and policy changes to mitigate climate
+        change.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
